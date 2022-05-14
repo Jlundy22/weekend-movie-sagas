@@ -27,9 +27,11 @@ function Details() {
     return (
         
         <div>
+             <h1>{movie.title}</h1>
             <img src={movie.poster} />
-            {movie.title}
-            {movie.description}
+           
+           <p>{movie.description}</p> 
+            <p>GENRES:</p>
             {genres.map(genre => (
                 <li key={genre.name}>
                     {genre.name}
