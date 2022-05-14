@@ -28,7 +28,7 @@ function MovieList() {
             <section className="movies">
                 {movies.map(movie => {
                     return (
-                        <div key={movie.id} >
+                        <div className="grid-container"  key={movie.id} >
                             <h3>{movie.title}</h3>
                             <img  onClick={() => fetchDescription(movie.id)} src={movie.poster} alt={movie.title}/>
                         </div>
