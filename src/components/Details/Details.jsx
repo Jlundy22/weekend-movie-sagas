@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-// import { useHistory } from 'react-router-dom';
+ import { useHistory } from 'react-router-dom';
 
 function Details() {
-
+    const history = useHistory();
     const movies = useSelector(store => store.movies);
     const genres = useSelector(store => store.genres);
     const [movie, setMovie] = useState([]);
@@ -20,8 +20,10 @@ function Details() {
 
     }, [genres]);
 
+    const goBack = () => {
+        history.push('/');
+    }
 
-    console.log(movie);
     return (
         
         <div>
@@ -33,6 +35,7 @@ function Details() {
                     {genre.name}
                 </li>
             ))}
+            <button onClick={() => goBack()}>Back</button>
         </div>
     )
 }
