@@ -30,7 +30,7 @@ function MovieList() {
                     return (
                         <div className="grid-container"  key={movie.id} >
                             <h3>{movie.title}</h3>
-                            <img  onClick={() => fetchDescription(movie.id)} src={movie.poster} width='200px' height='300px' alt={movie.title}/>
+                            <img class="img-list" onClick={() => fetchDescription(movie.id)} src={movie.poster} width='200px' height='300px' alt={movie.title}/>
                         </div>
                     );
                 })}

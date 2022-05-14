@@ -5,7 +5,7 @@
   justify-content: left;
 }
 
-img {
+.img-list {
     cursor: pointer;
 }
 .grid-container {

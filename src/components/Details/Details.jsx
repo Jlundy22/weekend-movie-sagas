@@ -27,7 +27,7 @@ function Details() {
     return (
 
         <div>
-            <h1>{movie.title}</h1>
+            <h2>{movie.title}</h2>
             <img src={movie.poster} />
 
             <p className="description">{movie.description}</p>
