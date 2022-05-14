@@ -8,9 +8,9 @@ router.get('/:id', (req, res) => {
   join movies_genres on genres.id = movies_genres.genre_id
   join movies on movies.id = movies_genres.movie_id
   where movies.id = $1`;
-  queryValues = [req.params.id];
+  movieId = [req.params.id];
 
-  pool.query(queryText, queryValues)
+  pool.query(queryText, movieId)
     .then( result => {
       res.send(result.rows);
     })

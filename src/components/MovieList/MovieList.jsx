@@ -11,6 +11,14 @@ function MovieList() {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
 
+    const fetchDescription = (movie)=> {
+        //console.log('movie clicked',movie)
+        dispatch({ 
+            type: 'MOVIE_GENRE',
+            payload: movie
+        });
+    }
+
     return (
         <main>
             <h1>MovieList</h1>
@@ -19,7 +27,7 @@ function MovieList() {
                     return (
                         <div key={movie.id} >
                             <h3>{movie.title}</h3>
-                            <img src={movie.poster} alt={movie.title}/>
+                            <img onClick={() => (fetchDescription(movie.id))} src={movie.poster} alt={movie.title}/>
                         </div>
                     );
                 })}
