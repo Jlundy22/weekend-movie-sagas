@@ -10,7 +10,9 @@ function Details() {
 
     useEffect(() => {
         const url = window.location.hash;
+        //console.log(url)
         const lastSegment = url.split("/").pop();
+        //console.log(lastSegment);
         for (let movie of movies) {
             //loops to match to id stores in lastSegment 
             // to a movie id in the movies redux store

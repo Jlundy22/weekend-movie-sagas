@@ -6,7 +6,7 @@
 
 _Duration: 6 hours_
 
-This weekend project was about using everything we have learned the past 12 weeks at Prime Digital Academy. We were tasked with utilizing React Redux and React Sagas to make this app more functional. As a user you are able to click on any movie poster and you will be taken to a details page for that movie.
+This weekend project was about using everything we have learned the past 12 weeks at Prime Digital Academy. We were tasked with utilizing React Redux and React Sagas to make this app more functional. As a user, you are able to click on any movie poster and you will be taken to a details page for that movie.
 
 
 ## Preview
