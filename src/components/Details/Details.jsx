@@ -12,14 +12,17 @@ function Details() {
         const url = window.location.hash;
         const lastSegment = url.split("/").pop();
         for (let movie of movies) {
+            //loops to match to id stores in lastSegment 
+            // to a movie id in the movies redux store
             if (movie.id === Number(lastSegment)) {
                 console.log('we have a match', movie)
+                //sets movie to the match
                 setMovie(movie)
             }
         }
 
     }, [genres]);
-
+    // pushes you back to the movie list page
     const goBack = () => {
         history.push('/');
     }

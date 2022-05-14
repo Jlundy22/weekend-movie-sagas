@@ -8,11 +8,15 @@ function MovieList() {
     const history = useHistory();
     const dispatch = useDispatch();
     const movies = useSelector(store => store.movies);
-
+ // renders all movie titles and posters 
+ // from the database when the page loads
     useEffect(() => {
         dispatch({ type: 'FETCH_MOVIES' });
     }, []);
-
+    // this function runs when a movie poster 
+    //is clicked on. A dispatch is sent root saga generator
+    // in index.js
+    // also pushes you to the details page 
     const fetchDescription = (movieId)=> {
         //console.log('movie clicked',movie)
         dispatch({ 
