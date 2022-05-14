@@ -24,13 +24,13 @@ function MovieList() {
 
     return (
         <main>
-            <h1>MovieList</h1>
+            <h1>Movies</h1>
             <section className="movies">
                 {movies.map(movie => {
                     return (
                         <div className="grid-container"  key={movie.id} >
                             <h3>{movie.title}</h3>
-                            <img  onClick={() => fetchDescription(movie.id)} src={movie.poster} alt={movie.title}/>
+                            <img  onClick={() => fetchDescription(movie.id)} src={movie.poster} width='200px' height='300px' alt={movie.title}/>
                         </div>
                     );
                 })}

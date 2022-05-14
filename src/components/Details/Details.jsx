@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
- import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 function Details() {
     const history = useHistory();
@@ -13,7 +13,7 @@ function Details() {
         const lastSegment = url.split("/").pop();
         for (let movie of movies) {
             if (movie.id === Number(lastSegment)) {
-                console.log('we have a match',movie)
+                console.log('we have a match', movie)
                 setMovie(movie)
             }
         }
@@ -25,18 +25,22 @@ function Details() {
     }
 
     return (
-        
+
         <div>
-             <h1>{movie.title}</h1>
+            <h1>{movie.title}</h1>
             <img src={movie.poster} />
-           
-           <p>{movie.description}</p> 
-            <p>GENRES:</p>
-            {genres.map(genre => (
-                <li key={genre.name}>
-                    {genre.name}
-                </li>
-            ))}
+
+            <p className="description">{movie.description}</p>
+            <div className="genre-container">
+                <p className="genre-title">Genre(s):</p>
+                    <ul>
+                    {genres.map(genre => (
+                        <li key={genre.name}>
+                            {genre.name}
+                        </li>
+                    ))}
+                    </ul>
+            </div>
             <button onClick={() => goBack()}>Back</button>
         </div>
     )
